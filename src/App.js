@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React , { useEffect }from 'react'
 import './App.css';
-
+import {NavigationBar} from './pages/NavBar';
+import BookPage from './pages/BookPage';
+import { ToastContainer } from 'react-toastify';
+import SearchBar from './componant/SearchBar';
+import {RazorpayButton} from './componant/RazorpayButton'
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return ( 
+    <>
+    <dir >
+    <ToastContainer/>
+      <NavigationBar  />
+      {/* <div >
+      <BookPage/>
+      </div> */}
+      <div>
+        <RazorpayButton/>
+      </div>
+
+    </dir>
+    </> 
   );
 }
 
